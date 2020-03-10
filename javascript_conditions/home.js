@@ -12,18 +12,18 @@ function verificarNome() {
 }
 
 function testarNome(nome) {
-    nome = nome.substring(0,1).toUpperCase().concat(nome.substring(1))
+    nome = nome.substring(0, 1).toUpperCase().concat(nome.substring(1)) // Para deixar a primeira letra maiúscula
 
     var fls = false;
     var nmTest = false;
 
     if (nome.length != 6) {
         const qtdLetra = nome.length
-        console.log('Estou aqui na contagem de letras')
+        console.log('A função parou em: CONDIÇÃO | NÚMERO DE LETRAS')
         return { qtdLetra, fls };
     }
     if (nome == 'Carlos' || nome == 'Marcos' || nome == 'Luis' || nome == 'Junior' || nome == 'Gilberto') {
-        console.log('Estou aqui no teste de nomes')
+        console.log('A função parou em: CONDIÇÃO | NOMES COMPARATIVOS')
         return { nmTest, fls };
 
     }
@@ -31,6 +31,5 @@ function testarNome(nome) {
         return { fls: true };
     }
 
-   
     return { fls };
 }
